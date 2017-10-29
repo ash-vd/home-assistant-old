@@ -1,0 +1,10 @@
+default_view:
+  view: yes
+  name: Home
+  icon: mdi:home-outline
+  entities:
+    - group.beneden
+    - group.boven
+    - group.slaapkamer
+    - group.house
+    - group.bureau

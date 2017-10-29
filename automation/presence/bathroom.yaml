@@ -1,0 +1,22 @@
+- alias: Presence - Bathroom - On
+  trigger:
+    - platform: state
+      entity_id: switch.badkamer, binary_sensor.aeotec_zw100_multisensor_6_sensor
+      to: 'on'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: input_boolean.bathroom_presence
+
+# ---------- #
+
+- alias: Presence - Bathroom - Off
+  trigger:
+    platform: state
+    entity_id: binary_sensor.aeotec_zw100_multisensor_6_sensor
+    to: 'off'
+    for:
+      minutes: 4
+  action:
+    service: homeassistant.turn_off
+    entity_id: input_boolean.bathroom_presence

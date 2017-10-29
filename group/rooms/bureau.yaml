@@ -1,0 +1,5 @@
+bureau:
+  name: Bureau
+  control: hidden
+  entities:
+    - switch.computer

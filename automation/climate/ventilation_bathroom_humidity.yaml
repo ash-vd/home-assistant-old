@@ -1,0 +1,7 @@
+- alias: Climate - Bathroom - High humidity
+  trigger:
+    platform: template
+    value_template: '{{ states.sensor.aeotec_zw100_multisensor_6_relative_humidity.state | int > 85 }}'
+  action:
+    service: homeassistant.turn_on
+    entity_id: script.house_ventilation_2_hours

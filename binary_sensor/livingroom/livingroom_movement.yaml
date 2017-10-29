@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    livingroom_movement:
+      value_template: '{{states.binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor_2.state == "on" or states.binary_sensor.livingroom_radar_01.state == "on"}}'
+      friendly_name: 'Livingroom movement'

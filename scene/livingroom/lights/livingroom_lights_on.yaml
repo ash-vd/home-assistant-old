@@ -1,0 +1,13 @@
+- name: Livingroom lights on
+  entities:
+    switch.neo_coolcam_power_plug_12a_switch: on # staande lamp
+    switch.trap: on # Lampje trap
+    light.bol:
+      state: on
+      brightness: 255
+    light.kastje:
+      state: on
+      brightness: 255
+    light.groot:
+      state: on
+      brightness: 255

@@ -1,0 +1,6 @@
+luminance:
+  name: Licht
+  entities:
+    - sensor.aeotec_zw100_multisensor_6_luminance
+    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance
+    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2

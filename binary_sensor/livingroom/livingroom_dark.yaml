@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    livingroom_dark:
+      value_template: '{{ states.sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2.state | int < 100 }}'
+      friendly_name: 'Livingroom less than 100 lux'

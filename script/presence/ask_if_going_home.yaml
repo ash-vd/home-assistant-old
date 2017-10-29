@@ -1,0 +1,7 @@
+sequence:
+  - service: notify.ios_iphone_ashwin
+    data:
+      message: "Ben je onderweg naar huis?"
+      data:
+        push:
+          category: "on_your_way_home" # Needs to match the top level identifier you used in the ios configuration

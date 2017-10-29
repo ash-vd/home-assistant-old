@@ -1,0 +1,6 @@
+slaapkamer:
+  name: Slaapkamer
+  control: hidden
+  entities:
+    - light.bed
+    - climate.slaapkamer

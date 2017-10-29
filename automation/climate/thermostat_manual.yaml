@@ -1,0 +1,12 @@
+- alias: Climate - Manual
+  trigger:
+    platform: mqtt
+    topic: events/heating/otmonitor/setpoint
+  condition:
+    condition: template
+    value_template: '{{ states.climate.boven.attributes.temperature | float != trigger.payload | float }}'
+  action:
+    service: climate.set_temperature
+    data_template:
+      entity_id: climate.boven
+      temperature: '{{ trigger.payload }}'

@@ -1,0 +1,6 @@
+# coffee_view:
+#   view: yes
+#   name: Coffee
+#   icon: mdi:settings
+#   entities:
+#     - switch.coffee_power

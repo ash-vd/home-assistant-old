@@ -1,0 +1,8 @@
+sequence:
+  - service: remote.turn_off
+    entity_id: remote.woonkamer
+  - delay:
+      minutes: 1
+  - service: homeassistant.turn_on
+    data:
+      entity_id: scene.livingroom_media_off

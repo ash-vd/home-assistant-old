@@ -1,0 +1,8 @@
+- name: Heating eco
+  entities:
+    climate.boven:
+      temperature: 16
+    # climate.beneden:
+    #   temperature: 17
+    # climate.slaapkamer:
+    #   temperature: 17

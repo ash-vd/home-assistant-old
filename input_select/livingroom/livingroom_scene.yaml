@@ -1,0 +1,10 @@
+livingroom_scene:
+  name: Scene
+  icon: mdi:alarm
+  initial: Automatisch
+  options:
+    - Automatisch
+    - Aan
+    - Gedimd
+    - Nacht
+    - Uit

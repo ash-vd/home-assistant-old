@@ -1,0 +1,8 @@
+sensor.aeotec_zw100_multisensor_6_relative_humidity:
+  friendly_name: Badkamer
+
+sensor.washok_humidity:
+  friendly_name: Washok
+
+sensor.slaapkamer_humidity:
+  friendly_name: Slaapkamer

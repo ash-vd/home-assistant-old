@@ -1,0 +1,11 @@
+sensor.aeotec_zw100_multisensor_6_temperature_29_1:
+  friendly_name: Badkamer
+
+sensor.washok_temperature:
+  friendly_name: Washok
+
+sensor.slaapkamer_temperature:
+  friendly_name: Slaapkamer
+
+sensor.otgw_roomtemperature:
+  friendly_name: Woonkamer

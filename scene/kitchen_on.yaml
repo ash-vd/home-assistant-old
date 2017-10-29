@@ -1,0 +1,3 @@
+- name: Kitchen on
+  entities:
+    switch.kitchen_speakers: on

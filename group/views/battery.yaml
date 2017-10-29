@@ -1,0 +1,6 @@
+battery_view:
+  view: yes
+  name: Batterijen
+  icon: mdi:battery-70
+  entities:
+    - group.battery

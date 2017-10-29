@@ -1,0 +1,11 @@
+- platform: google_travel_time
+  name: Ashwin to home
+  api_key: !secret google_api_key
+  origin: device_tracker.iphone_ashwin
+  destination: zone.home
+
+- platform: google_travel_time
+  name: ANWB to home
+  api_key: !secret google_api_key
+  origin: zone.anwb
+  destination: zone.home

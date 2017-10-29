@@ -1,0 +1,11 @@
+climate_valves:
+  name: Radiatoren
+  entities:
+    - climate.danfoss_z_thermostat_014g0013_heating_1_6 # Beneden
+    - climate.danfoss_z_thermostat_014g0013_heating_1_3 # Beneden 2
+
+    - climate.danfoss_z_thermostat_014g0013_heating_1 # Boven
+    - climate.danfoss_z_thermostat_014g0013_heating_1_2 # Boven 2
+
+    - climate.danfoss_z_thermostat_014g0013_heating_1_4 # Slaapkamer
+    - climate.danfoss_z_thermostat_014g0013_heating_1_5 # Slaapkamer 2

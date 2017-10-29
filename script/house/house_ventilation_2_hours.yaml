@@ -1,0 +1,11 @@
+
+sequence:
+  # Cancel ev. old timers
+  - service: script.turn_off
+    entity_id: script.house_ventilation_2_hours_off
+  # set new timer
+  - service: script.turn_on
+    entity_id: script.house_ventilation_2_hours_off
+  # turn on the ventilation
+  - service: switch.turn_on
+    entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2

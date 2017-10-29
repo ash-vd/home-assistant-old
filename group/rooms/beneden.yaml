@@ -1,0 +1,8 @@
+beneden:
+  name: Beneden
+  control: hidden
+  entities:
+    - switch.trap
+    - light.hal
+    - climate.beneden
+    - light.led

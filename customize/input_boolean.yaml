@@ -1,0 +1,11 @@
+input_boolean.play_spotify:
+  friendly_name: Spotify
+
+input_boolean.livingroom_presence:
+  friendly_name: Woonkamer
+
+input_boolean.bathroom_presence:
+  friendly_name: Badkamer
+
+input_boolean.toilet_presence:
+  friendly_name: Toilet

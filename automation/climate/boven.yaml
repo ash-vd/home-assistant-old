@@ -1,0 +1,29 @@
+- alias: Climate - Upstairs - Thermostat sync
+  trigger:
+    platform: state
+    entity_id: climate.boven
+  condition:
+    condition: template
+    value_template: '{{ trigger.from_state.attributes.temperature | float != trigger.to_state.attributes.temperature | float }}'
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: group.climate_boven
+        temperature: '{{states.climate.boven.attributes.temperature}}'
+
+
+# Syncs the HA themostat to the OTGW (and the normal thermostat). 
+# Condition is there to prevent a lot of unnessesary triggers.
+# 
+- alias: Climate - Upstairs - OTGW sync
+  trigger:
+    platform: state
+    entity_id: climate.boven
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.otgw_setpoint.state | float != trigger.to_state.attributes.temperature | float }}'
+  action:
+    service: mqtt.publish
+    data_template:
+      topic: "actions/otmonitor/setpoint"
+      payload: '{{ states.climate.boven.attributes.temperature | float }}'

@@ -1,0 +1,6 @@
+- platform: wunderground
+  api_key: !secret wu_api_key
+  pws_id: IROTTERD275
+  monitored_conditions:
+    - weather
+    - temp_c

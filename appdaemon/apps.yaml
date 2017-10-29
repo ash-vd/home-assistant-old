@@ -1,0 +1,7 @@
+onyourwayhome:
+  module: onyourwayhome
+  class: OnYourWayHome
+  entity_id: sensor.ashwin_to_home
+  turn_on: script.ask_if_going_home
+  treshold: 1500
+  moves: 3

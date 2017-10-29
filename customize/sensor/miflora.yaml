@@ -1,0 +1,11 @@
+sensor.flower_1_moisture:
+  friendly_name: Slaapkamer
+
+sensor.flower_1_battery:
+  friendly_name: Slaapkamer
+
+sensor.flower_2_moisture:
+  friendly_name: Woonkamer
+
+sensor.flower_2_battery:
+  friendly_name: Woonkamer

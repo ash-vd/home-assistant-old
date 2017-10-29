@@ -1,0 +1,9 @@
+AppDaemon:
+  logfile: /var/log/appdaemon/appdaemon.log
+  errorfile: /var/log/appdaemon/error.log
+  logsize: 100000
+  log_generations: 3
+  threads: 10
+HASS:
+  ha_url: https://home.ashwinvandijk.nl
+  ha_key: Schietb@@n39

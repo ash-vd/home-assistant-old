@@ -1,0 +1,57 @@
+- alias: Lightning - Toilet - On
+  trigger:
+    - platform: state
+      entity_id: input_boolean.toilet_presence
+      to: 'on'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.wc_boven
+        state: 'off'
+      - condition: state
+        entity_id: input_select.mode
+        state: 'Normaal'
+
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.wc_boven
+      brightness: 255
+
+# ---------- #
+
+- alias: Lightning - Toilet - On (Night)
+  trigger:
+    - platform: state
+      entity_id: input_boolean.toilet_presence
+      to: 'on'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.wc_boven
+        state: 'off'
+      - condition: state
+        entity_id: input_select.mode
+        state: 'Nacht'
+
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.wc_boven
+      brightness: 30
+
+# ---------- #
+
+- alias: Lightning - Toilet - Off
+  trigger:
+    - platform: state
+      entity_id: input_boolean.toilet_presence
+      to: 'off'
+
+  action:
+    service: homeassistant.turn_off
+    entity_id: light.wc_boven

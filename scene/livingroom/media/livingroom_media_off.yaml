@@ -1,0 +1,6 @@
+- name: Livingroom media off
+  entities:
+    switch.greenwave_powernode_6_port_switch: off # Z-5400
+    switch.greenwave_powernode_6_port_switch_3: off # CD
+    switch.greenwave_powernode_6_port_switch_5: off # Receiver
+    switch.greenwave_powernode_6_port_switch_6: off # TV

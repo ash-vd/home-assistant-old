@@ -1,0 +1,7 @@
+sensor.buienradar:
+  icon: mdi:weather-pouring
+
+sensor.pws_weather:
+  friendly_name: Weer
+sensor.pws_temp_c:
+  friendly_name: Temperatuur

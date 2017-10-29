@@ -1,0 +1,14 @@
+climate.danfoss_z_thermostat_014g0013_heating_1:
+  friendly_name: Boven
+climate.danfoss_z_thermostat_014g0013_heating_1_2:
+  friendly_name: Boven 2
+
+climate.danfoss_z_thermostat_014g0013_heating_1_6:
+  friendly_name: Beneden
+climate.danfoss_z_thermostat_014g0013_heating_1_3:
+  friendly_name: Beneden 2
+
+climate.danfoss_z_thermostat_014g0013_heating_1_4:
+  friendly_name: Slaapkamer
+climate.danfoss_z_thermostat_014g0013_heating_1_5:
+  friendly_name: Slaapkamer 2

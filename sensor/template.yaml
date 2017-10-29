@@ -1,0 +1,48 @@
+- platform: template
+  sensors:
+    harmony_woonkamer:
+      value_template: '{{ states.remote.woonkamer.attributes.current_activity }}'
+      friendly_name: 'Woonkamer'
+
+
+- platform: template
+  sensors:
+    battery_danfoss_1:
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.danfoss_z_thermostat_014g0013.attributes.battery_level }}'
+      friendly_name: 'Thermostaatkraan Boven'
+
+- platform: template
+  sensors:
+    battery_danfoss_2:
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.danfoss_z_thermostat_014g0013_2.attributes.battery_level }}'
+      friendly_name: 'Thermostaatkraan Boven 2'
+
+- platform: template
+  sensors:
+    battery_danfoss_3:
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.danfoss_z_thermostat_014g0013_3.attributes.battery_level }}'
+      friendly_name: 'Thermostaatkraan Beneden'
+
+- platform: template
+  sensors:
+    battery_danfoss_4:
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.danfoss_z_thermostat_014g0013_4.attributes.battery_level }}'
+      friendly_name: 'Thermostaatkraan Slaapkamer'
+
+- platform: template
+  sensors:
+    battery_danfoss_5:
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.danfoss_z_thermostat_014g0013_5.attributes.battery_level }}'
+      friendly_name: 'Thermostaatkraan Slaapkamer 2'
+
+- platform: template
+  sensors:
+    battery_danfoss_6:
+      unit_of_measurement: '%'
+      value_template: '{{ states.zwave.danfoss_z_thermostat_014g0013_6.attributes.battery_level }}'
+      friendly_name: 'Thermostaatkraan Beneden 2'

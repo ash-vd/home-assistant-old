@@ -1,0 +1,15 @@
+sensors_view:
+  view: yes
+  name: Sensors
+  icon: mdi:access-point
+  entities:
+    - group.doors
+    - group.windows
+    - group.temperature
+    - group.humidity
+    - group.usage
+    - group.presence
+    - group.movement
+    - group.luminance
+    - group.climate_valves
+    - group.plants

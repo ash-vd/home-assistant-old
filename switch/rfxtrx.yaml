@@ -1,0 +1,13 @@
+- platform: rfxtrx
+  automatic_add: True
+  devices:
+    0b110004011bd1aa0a010f50:
+      name: buitendeur
+    0b110000011bd7560a010f60:
+      name: wc_boven
+    0b11000e011533de0a000050:
+      name: badkamer
+    0710010141090170:
+      name: switch_1
+    0b1100d400e19aa20a000050:
+      name: deur_slaapkamer

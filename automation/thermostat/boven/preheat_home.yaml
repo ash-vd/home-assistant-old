@@ -1,0 +1,28 @@
+- alias: Climate - Preheat when home
+  trigger:
+  - platform: state
+    entity_id: input_number.thermostat_boven_preheat
+
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: '{{ states.input_number.thermostat_boven_preheat.state | float != states.input_number.thermostat_boven_preheat_continued.state | float }}'
+
+      - condition: or
+        conditions:
+          - condition: state
+            entity_id: group.presence
+            state: 'on'
+          - condition: template
+            value_template: '{{ states.climate.boven.attributes.temperature | float > states.input_number.thermostat_boven_preheat.state | float }}'
+
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.boven
+        temperature: '{{states.input_number.thermostat_boven_preheat.state}}'
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.thermostat_boven_preheat_continued
+        value: '{{states.input_number.thermostat_boven_preheat.state}}'

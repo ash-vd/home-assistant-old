@@ -1,0 +1,11 @@
+sensor.neo_coolcam_battery_powered_pir_sensor_luminance:
+  friendly_name: WC
+  icon: mdi:white-balance-sunny
+
+sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2:
+  friendly_name: Woonkamer
+  icon: mdi:white-balance-sunny
+
+sensor.aeotec_zw100_multisensor_6_luminance:
+  friendly_name: Badkamer
+  icon: mdi:white-balance-sunny

@@ -1,0 +1,16 @@
+- alias: Presence - Door open
+  trigger:
+  - platform: state
+    entity_id: switch.buitendeur
+    to: 'on'
+
+  condition:
+    condition: state
+    entity_id: input_boolean.play_spotify
+    state: 'on'
+
+  action:
+    - service: homeassistant.turn_on
+      entity_id: script.play_spotify
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.play_spotify

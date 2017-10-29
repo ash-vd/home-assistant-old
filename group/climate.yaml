@@ -1,0 +1,25 @@
+climate:
+  name: Klimaat
+  entities:
+    - climate.beneden
+    - climate.boven
+    - climate.slaapkamer
+    - switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch
+
+climate_beneden:
+  name: Beneden
+  entities:
+    - climate.danfoss_z_thermostat_014g0013_heating_1_14_1 # Beneden
+    - climate.danfoss_z_thermostat_014g0013_heating_1_11_1 # Beneden 2
+
+climate_boven:
+  name: Boven
+  entities:
+    - climate.danfoss_z_thermostat_014g0013_heating_1_9_1 # Boven
+    - climate.danfoss_z_thermostat_014g0013_heating_1_10_1 # Boven 2
+
+climate_slaapkamer:
+  name: Slaapkamer
+  entities:
+    - climate.danfoss_z_thermostat_014g0013_heating_1_12_1 # Slaapkamer
+    - climate.danfoss_z_thermostat_014g0013_heating_1_13_1 # Slaapkamer 2

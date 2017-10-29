@@ -1,0 +1,3 @@
+- platform: generic
+  still_image_url: http://cdn.knmi.nl/knmi/map/general/weather-map.gif
+  name: Weerkaart

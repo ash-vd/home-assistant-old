@@ -1,0 +1,19 @@
+- alias: Home - Scene - Home
+  trigger:
+    platform: state
+    entity_id: input_boolean.home
+    to: 'on'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.home
+
+- alias: Home - Scene - Away
+  trigger:
+    platform: state
+    entity_id: input_boolean.home
+    to: 'off'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: scene.away

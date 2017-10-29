@@ -1,0 +1,9 @@
+music_view:
+  view: yes
+  name: Muziek
+  icon: mdi:music
+  entities:
+    - switch.bedroom_speakers
+    - switch.kitchen_speakers
+    - switch.harmony_multiroom
+    - media_player.spotify

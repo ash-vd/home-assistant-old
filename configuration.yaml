@@ -1,0 +1,109 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 2
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Amsterdam
+
+  customize: !include_dir_merge_named customize
+
+# Enables the frontend
+frontend:
+# Enables iOS
+ios:
+  push:
+    categories:
+      - name: Onderweg naar huis
+        identifier: 'on_your_way_home'
+        actions:
+          - identifier: 'YES'
+            title: 'Ja'
+          - identifier: 'NO'
+            title: 'Nee'
+
+http:
+  base_url: home.ashwinvandijk.nl
+  api_password: !secret http_password
+  ssl_certificate: /etc/letsencrypt/live/home.ashwinvandijk.nl/fullchain.pem
+  ssl_key: /etc/letsencrypt/live/home.ashwinvandijk.nl/privkey.pem
+  cors_allowed_origins:
+    - http://localhost:3000
+
+mqtt:
+  broker: 10.10.1.1
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+
+# Checks for available updates
+updater:
+
+config:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+#conversation:
+
+# Enables support for tracking state changes over time.
+history:
+  include:
+    domains:
+      - sensor
+      - switch
+      - media_player
+
+recorder:
+  purge_interval: 2
+  purge_keep_days: 7
+  db_url: !secret db_url
+
+# Logs
+logger:
+  default: info
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+automation: !include_dir_merge_list automation
+binary_sensor: !include_dir_merge_list binary_sensor
+camera: !include_dir_merge_list camera
+climate: !include_dir_merge_list climate
+group: !include_dir_merge_named group
+input_boolean: !include_dir_merge_named input_boolean
+input_select: !include_dir_merge_named input_select
+input_number: !include_dir_merge_named input_number
+light: !include_dir_merge_list light
+media_player: !include_dir_merge_list media_player
+plant: !include_dir_merge_named plant
+remote: !include_dir_merge_list remote
+scene: !include_dir_merge_list scene
+script: !include_dir_named script
+sensor: !include_dir_merge_list sensor
+snips: !include_dir_merge_list snips
+switch: !include_dir_merge_list switch
+zone: !include_dir_merge_list zone
+
+# Zwave
+zwave:
+  usb_path: /dev/zwave
+
+# RFXCOM
+rfxtrx:
+  device: /dev/rfxcom
+
+notify:
+  - name: pushbullet
+    platform: pushbullet
+    api_key: !secret pushbullet_api_key

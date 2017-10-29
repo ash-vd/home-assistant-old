@@ -1,0 +1,83 @@
+switch.buitendeur:
+  assumed_state: false
+  friendly_name: Buitendeur
+  icon: mdi:crop-portrait
+  homebridge_hidden: true
+
+switch.harmony_multiroom:
+  assumed_state: false
+  friendly_name: Woonkamer
+  homebridge_hidden: true
+
+switch.kitchen_speakers:
+  friendly_name: Keuken
+  homebridge_hidden: true
+
+switch.bedroom_speakers:
+  friendly_name: Slaapkamer
+  homebridge_hidden: true
+
+switch.badkamer:
+  assumed_state: false
+  friendly_name: Badkamer
+  icon: mdi:crop-portrait
+  homebridge_hidden: true
+  
+switch.wc_boven:
+  assumed_state: false
+  friendly_name: WC-deur
+  icon: mdi:crop-portrait
+  homebridge_hidden: true
+
+switch.deur_slaapkamer:
+  assumed_state: false
+  friendly_name: Slaapkamer
+  icon: mdi:crop-portrait
+  homebridge_hidden: true
+
+switch.trap:
+  friendly_name: Trap
+  icon: mdi:lightbulb
+  assumed_state: false
+
+switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch:
+  homebridge_hidden: true
+  
+switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2:
+  friendly_name: Ventilatie
+  icon: mdi:fan
+  homebridge_hidden: true
+
+switch.greenwave_powernode_6_port_switch:
+  friendly_name: Z-5400
+  icon: mdi:speaker
+  homebridge_hidden: true
+
+switch.greenwave_powernode_6_port_switch_2:
+  friendly_name: Game
+  icon: mdi:google-controller
+  homebridge_hidden: true
+
+switch.greenwave_powernode_6_port_switch_3:
+  friendly_name: CD
+  icon: mdi:album
+  homebridge_hidden: true
+
+switch.greenwave_powernode_6_port_switch_4:
+  friendly_name: Horizon
+  icon: mdi:drag-horizontal
+  homebridge_hidden: true
+
+switch.greenwave_powernode_6_port_switch_5:
+  friendly_name: Receiver
+  icon: mdi:server
+  homebridge_hidden: true
+
+switch.greenwave_powernode_6_port_switch_6:
+  friendly_name: TV
+  icon: mdi:television
+  homebridge_hidden: true
+
+switch.neo_coolcam_power_plug_12a_switch:
+  friendly_name: Staande lamp
+  icon: mdi:lightbulb

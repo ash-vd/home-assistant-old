@@ -1,0 +1,9 @@
+boven_hoek:
+  sensors:
+    moisture: sensor.flower_2_moisture
+    battery: sensor.flower_2_battery
+    conductivity: sensor.flower_2_conductivity
+  min_moisture: 20
+  max_moisture: 70
+  min_conductivity: 500
+  max_conductivity: 3000

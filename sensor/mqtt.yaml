@@ -1,0 +1,23 @@
+- platform: mqtt
+  state_topic: "events/heating/otmonitor/roomtemperature"
+  name: "otgw_roomtemperature"
+  unit_of_measurement: '°C'
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  state_topic: "events/heating/otmonitor/setpoint"
+  name: "otgw_setpoint"
+  unit_of_measurement: '°C'
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  state_topic: "sensors/washok/temperature"
+  name: "washok_temperature"
+  unit_of_measurement: '°C'
+  value_template: '{{ value }}'
+
+- platform: mqtt
+  state_topic: "sensors/washok/humidity"
+  name: "washok_humidity"
+  unit_of_measurement: '%'
+  value_template: '{{ value }}'

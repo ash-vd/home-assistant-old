@@ -1,0 +1,9 @@
+boven_stoel:
+  sensors:
+    moisture: sensor.flower_3_moisture
+    battery: sensor.flower_3_battery
+    conductivity: sensor.flower_3_conductivity
+  min_moisture: 20
+  max_moisture: 70
+  min_conductivity: 500
+  max_conductivity: 3000

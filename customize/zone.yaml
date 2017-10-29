@@ -1,0 +1,9 @@
+zone.home:
+  track_ios: true
+  radius: 250
+
+zone.anwb:
+  track_ios: true
+
+zone.werkspoorkathedraal:
+  track_ios: true

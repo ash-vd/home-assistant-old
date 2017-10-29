@@ -1,0 +1,6 @@
+snapcast:
+  name: snapcast
+  entities:
+    - media_player.snapcast_client_0013efc00012
+    - media_player.snapcast_client_b827ebb578b3
+    - media_player.snapcast_client_b827ebb7529f

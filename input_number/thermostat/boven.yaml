@@ -1,0 +1,13 @@
+thermostat_boven_preheat:
+  name: Thermostat boven preheat
+  initial: 16
+  min: 0
+  max: 25
+  step: 0.5
+
+thermostat_boven_preheat_continued:
+  name: Thermostat boven preheat continued
+  initial: 16
+  min: 0
+  max: 25
+  step: 0.5

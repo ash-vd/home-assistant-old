@@ -1,0 +1,8 @@
+mode:
+  name: Programma
+  icon: mdi:home-modern
+  initial: Normaal
+  options:
+    - Normaal
+    - Nacht
+    - Vakantie

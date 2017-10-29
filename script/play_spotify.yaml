@@ -1,0 +1,8 @@
+sequence:
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.spotify
+      source: Multiroom
+  - service: media_player.media_play
+    data:
+      entity_id: media_player.spotify

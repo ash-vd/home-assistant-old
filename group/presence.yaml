@@ -1,0 +1,6 @@
+presence:
+  name: Aanwezigheid
+  entities:
+    - input_boolean.bathroom_presence
+    - input_boolean.toilet_presence
+    - input_boolean.livingroom_presence

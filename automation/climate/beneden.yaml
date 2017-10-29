@@ -1,0 +1,9 @@
+- alias: Climate - Downstairs - Thermostat sync
+  trigger:
+    platform: state
+    entity_id: climate.beneden
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: group.climate_beneden
+        temperature: '{{states.climate.beneden.attributes.temperature}}'

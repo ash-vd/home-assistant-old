@@ -1,0 +1,37 @@
+sensor.neo_coolcam_power_plug_12a_power_22_8:
+  friendly_name: Staande lamp
+  icon: mdi:flash
+
+sensor.neo_coolcam_power_plug_12a_power_23_8:
+  friendly_name: Vaatwasser
+  icon: mdi:flash
+
+sensor.fibaro_system_fgd212_dimmer_2_power_16_4:
+  friendly_name: Badkamer
+  icon: mdi:flash
+
+sensor.greenwave_powernode_6_port_power_8_8:
+  friendly_name: Z-5400
+  icon: mdi:flash
+sensor.greenwave_powernode_6_port_power_8_8_2:
+  friendly_name: Game
+  icon: mdi:flash
+sensor.greenwave_powernode_6_port_power_8_8_3:
+  friendly_name: CD
+  icon: mdi:flash
+sensor.greenwave_powernode_6_port_power_8_8_4:
+  friendly_name: Horizon
+  icon: mdi:flash
+sensor.greenwave_powernode_6_port_power_8_8_5:
+  friendly_name: Receiver
+  icon: mdi:flash
+sensor.greenwave_powernode_6_port_power_8_8_6:
+  friendly_name: TV
+  icon: mdi:flash
+
+sensor.power_consumption:
+  friendly_name: Verbruik
+sensor.power_consumption_low:
+  friendly_name: Verbruik (laag)
+sensor.power_consumption_normal:
+  friendly_name: Verbruik (normaal)

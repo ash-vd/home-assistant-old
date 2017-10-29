@@ -1,0 +1,22 @@
+- alias: Presence - Toilet - On
+  trigger:
+    - platform: state
+      entity_id: switch.wc_boven, binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+      to: 'on'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: input_boolean.toilet_presence
+
+# ---------- #
+
+- alias: Presence - Toilet - Off
+  trigger:
+    platform: state
+    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+    to: 'off'
+    for:
+      minutes: 2
+  action:
+    service: homeassistant.turn_off
+    entity_id: input_boolean.toilet_presence

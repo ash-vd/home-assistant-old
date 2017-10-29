@@ -1,0 +1,57 @@
+- alias: Lightning - Bathroom - On
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bathroom_presence, switch.badkamer, binary_sensor.aeotec_zw100_multisensor_6_sensor
+      to: 'on'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.fibaro_system_fgd212_dimmer_2_level
+        state: 'off'
+      - condition: state
+        entity_id: input_select.mode
+        state: 'Normaal'
+
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.fibaro_system_fgd212_dimmer_2_level
+      brightness: 255
+
+# ---------- #
+
+- alias: Lightning - Bathroom - On (Night)
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bathroom_presence
+      to: 'on'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: light.fibaro_system_fgd212_dimmer_2_level
+        state: 'off'
+      - condition: state
+        entity_id: input_select.mode
+        state: 'Nacht'
+
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.fibaro_system_fgd212_dimmer_2_level
+      brightness: 3
+
+# ---------- #
+
+- alias: Lightning - Bathroom - Off
+  trigger:
+    - platform: state
+      entity_id: input_boolean.bathroom_presence
+      to: 'off'
+
+  action:
+    service: light.turn_off
+    entity_id: light.fibaro_system_fgd212_dimmer_2_level

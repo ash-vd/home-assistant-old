@@ -1,0 +1,7 @@
+- name: Livingroom lights off
+  entities:
+    switch.neo_coolcam_power_plug_12a_switch: off # staande lamp
+    switch.trap: off # Lampje trap
+    light.bol: off
+    light.kastje: off
+    light.groot: off

@@ -1,0 +1,6 @@
+- name: Away
+  entities:
+    script.livingroom_media_off: on
+    scene.kitchen_off: on
+    scene.heating_eco: on
+    script.reset_thermostat: on

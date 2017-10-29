@@ -1,0 +1,20 @@
+- alias: Climate - Resume program
+  trigger:
+  - platform: state
+    entity_id: group.presence
+    to: 'on'
+
+  condition:
+    condition: template
+    value_template: '{{ states.input_number.thermostat_boven_preheat.state | float != states.input_number.thermostat_boven_preheat_continued.state | float }}'
+
+  action:
+    - service: climate.set_temperature
+      data_template:
+        entity_id: climate.boven
+        temperature: '{{states.input_number.thermostat_boven_preheat.state}}'
+    - service: input_number.set_value
+      data_template:
+        entity_id: input_number.thermostat_boven_preheat_continued
+        value: '{{states.input_number.thermostat_boven_preheat.state}}'
+

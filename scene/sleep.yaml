@@ -1,0 +1,6 @@
+- name: Sleep
+  entities:
+    scene.livingroom_lights_off: on
+    input_select.livingroom_scene:
+      option: 'Automatisch'
+

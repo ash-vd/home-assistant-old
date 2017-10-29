@@ -1,0 +1,25 @@
+- platform: limitlessled
+  bridges:
+    - host: 10.10.2.1
+      groups:
+      - number: 1
+        name: wc_boven
+        type: rgbw
+      - number: 1
+        name: kastje
+        type: rgbww
+
+      - number: 2
+        name: hal
+        type: rgbw
+      - number: 2
+        name: bol
+        type: rgbww
+
+      - number: 3
+        name: groot
+        type: rgbww
+      - number: 3
+        name: bed
+        type: rgbw
+      

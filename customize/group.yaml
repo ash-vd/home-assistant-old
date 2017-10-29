@@ -1,0 +1,5 @@
+group.movement:
+  friendly_name: Beweging
+
+group.alarm:
+  friendly_name: Wekker

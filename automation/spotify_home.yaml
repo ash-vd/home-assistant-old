@@ -1,0 +1,19 @@
+- alias: Music - Spotify
+  trigger:
+    platform: state
+    entity_id: group.presence
+    to: 'home'
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: media_player.spotify
+        state: 'playing'
+      - condition: time
+        after: '06:30'
+        before: '00:30'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: input_boolean.play_spotify

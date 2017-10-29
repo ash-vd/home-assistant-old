@@ -1,0 +1,4 @@
+- platform: harmony
+  name: Woonkamer
+  host: 10.10.1.10
+  scan_interval: 10

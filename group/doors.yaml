@@ -1,0 +1,7 @@
+doors:
+  name: Deuren
+  entities:
+    - switch.buitendeur
+    - switch.wc_boven
+    - switch.badkamer
+    - switch.deur_slaapkamer

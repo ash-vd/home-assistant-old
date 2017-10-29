@@ -1,0 +1,16 @@
+boven:
+  name: Boven
+  control: hidden
+  entities:
+    - input_select.livingroom_scene
+    - switch.neo_coolcam_power_plug_12a_switch
+    - light.bol
+    - light.kastje
+    - light.groot
+    - switch.greenwave_powernode_6_port_switch
+    - switch.greenwave_powernode_6_port_switch_2
+    - switch.greenwave_powernode_6_port_switch_3
+    - switch.greenwave_powernode_6_port_switch_4
+    - switch.greenwave_powernode_6_port_switch_5
+    - switch.greenwave_powernode_6_port_switch_6
+    - climate.boven

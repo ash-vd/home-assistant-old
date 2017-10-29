@@ -1,0 +1,12 @@
+- alias: Pause spotify when tv turned on
+  trigger:
+  - platform: template
+    value_template: "{{ states.sensor.harmony_woonkamer.state != 'PowerOff' and states.sensor.harmony_woonkamer.state != 'Multiroom' }}"
+
+  condition:
+    condition: template
+    value_template: "{{ states.media_player.spotify.attributes.source == 'Multiroom' }}"
+
+  action:
+  - service: media_player.media_pause
+    entity_id: media_player.spotify

@@ -1,0 +1,15 @@
+- platform: template
+  sensors:
+    livingroom_playing_video:
+      value_template: >-
+          {%- if is_state("sensor.harmony_woonkamer", "PowerOff")
+              or is_state("sensor.harmony_woonkamer", "MultiRoom")
+              or is_state_attr('media_player.woonkamer', 'media_content_type', 'music') -%}
+          True
+          {%- else -%}
+          False
+          {%- endif %}
+      entity_id:
+        - sensor.harmony_woonkamer
+        - media_player.woonkamer
+      friendly_name: 'Video is playing in the livingroom'

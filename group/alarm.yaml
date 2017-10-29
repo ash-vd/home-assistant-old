@@ -1,0 +1,6 @@
+alarm:
+  name: Wekker
+  entities:
+    - input_boolean.alarm
+    - input_boolean.alarm_weekday
+    - input_select.alarm

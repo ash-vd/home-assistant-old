@@ -1,0 +1,10 @@
+tv:
+  name: TV
+  control: hidden
+  entities:
+    - switch.greenwave_powernode_6_port_switch_8_0
+    - switch.greenwave_powernode_6_port_switch_8_0_2
+    - switch.greenwave_powernode_6_port_switch_8_0_3
+    - switch.greenwave_powernode_6_port_switch_8_0_4
+    - switch.greenwave_powernode_6_port_switch_8_0_5
+    - switch.greenwave_powernode_6_port_switch_8_0_6

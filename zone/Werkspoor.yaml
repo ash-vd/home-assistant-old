@@ -1,0 +1,6 @@
+- name: Werkspoorkathedraal
+  latitude: 52.105188
+  longitude: 5.080432
+  radius: 300
+  icon: mdi:briefcase
+  track_ios: true

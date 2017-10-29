@@ -1,0 +1,25 @@
+light.wc_boven:
+  friendly_name: WC
+
+light.hal:
+  friendly_name: Hal
+  homebridge_hidden: true
+
+light.bol:
+  friendly_name: Bol
+
+light.groot:
+  friendly_name: Groot
+
+light.bed:
+  friendly_name: Bed
+
+light.kastje:
+  friendly_name: Kastje
+  
+light.fibaro_system_fgd212_dimmer_2_level:
+  friendly_name: Badkamer
+
+light.fibaro_system_fgd212_dimmer_2_level_2:
+  friendly_name: Badkamer
+  homebridge_hidden: true

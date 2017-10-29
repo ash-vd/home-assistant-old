@@ -1,0 +1,7 @@
+temperature:
+  name: Temperatuur
+  entities:
+    - sensor.aeotec_zw100_multisensor_6_temperature_29_1
+    - sensor.washok_temperature
+    - sensor.slaapkamer_temperature
+    - sensor.otgw_roomtemperature

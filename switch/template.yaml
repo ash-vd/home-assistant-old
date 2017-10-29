@@ -1,0 +1,12 @@
+- platform: template
+  switches:
+    harmony_multiroom:
+      value_template: "{{ states.remote.woonkamer.attributes.current_activity == 'Multiroom'}}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.woonkamer
+        data:
+          activity: 'Multiroom'
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.woonkamer

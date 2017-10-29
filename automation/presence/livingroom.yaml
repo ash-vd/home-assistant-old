@@ -1,0 +1,22 @@
+- alias: Presence - Livingroom - On
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.livingroom_movement
+      to: 'on'
+
+  action:
+    service: homeassistant.turn_on
+    entity_id: input_boolean.livingroom_presence
+
+# ---------- #
+
+- alias: Presence - Livingroom - Off
+  trigger:
+    platform: state
+    entity_id: binary_sensor.livingroom_movement
+    to: 'off'
+    for:
+      minutes: 20
+  action:
+    service: homeassistant.turn_off
+    entity_id: input_boolean.livingroom_presence

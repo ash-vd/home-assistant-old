@@ -1,0 +1,11 @@
+livingroom_presence:
+  name: livingroom_presence
+  initial: off
+
+bathroom_presence:
+  name: bathroom_presence
+  initial: off
+
+toilet_presence:
+  name: toilet_presence
+  initial: off
