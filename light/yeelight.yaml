@@ -1,0 +1,7 @@
+- platform: yeelight
+  devices:
+    10.10.1.50:
+      name: Toilet
+      transition: 200
+      use_music_mode: False
+      save_on_change: False

@@ -1,6 +1,0 @@
-- platform: mqtt
-  state_topic: "radar01"
-  name: "Livingroom Radar 01"
-  qos: 0
-  payload_on: "1"
-  payload_off: "0"

@@ -2,4 +2,4 @@ sequence:
   - service: input_number.set_value
     data:
       entity_id: input_number.thermostat_boven_preheat_continued
-      value: 0
+      value: 17.5

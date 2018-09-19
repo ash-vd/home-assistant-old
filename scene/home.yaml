@@ -1,4 +1,5 @@
 - name: Home
   entities:
-    scene.livingroom_media_on: on
+    scene.livingroom_on: on
     scene.kitchen_on: on
+    scene.bedroom_on: on

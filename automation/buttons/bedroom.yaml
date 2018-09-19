@@ -1,0 +1,81 @@
+- alias: Verlichting - Slaapkamer - Toggle (rechts)
+  trigger:
+    platform: mqtt
+    topic: 'zigbee/0x00158d0001bc52a7'
+  condition:
+    condition: template
+    value_template: "{{ 'single' == trigger.payload_json.click }}"
+
+  action:
+    service: light.toggle
+    data:
+      entity_id: light.0x90fd9ffffe152064
+
+
+
+- alias: Verlichting - Slaapkamer - Toggle (links)
+  trigger:
+    platform: mqtt
+    topic: 'zigbee/0x00158d0001870a15'
+  condition:
+    condition: template
+    value_template: "{{ 'single' == trigger.payload_json.click }}"
+
+  action:
+    service: light.toggle
+    data:
+      entity_id: light.0x000b57fffed8cd13
+
+
+
+- alias: Muziek - Slaapkamer - Toggle (rechts)
+  trigger:
+    platform: mqtt
+    topic: 'zigbee/0x00158d0001bc52a7'
+  condition:
+    condition: template
+    value_template: "{{ 'double' == trigger.payload_json.click }}"
+  action:
+    service: switch.toggle
+    data:
+      entity_id: switch.bedroom_speakers
+
+
+- alias: Muziek - Slaapkamer - Toggle (links)
+  trigger:
+    platform: mqtt
+    topic: 'zigbee/0x00158d0001870a15'
+  condition:
+    condition: template
+    value_template: "{{ 'double' == trigger.payload_json.click }}"
+  action:
+    service: switch.toggle
+    data:
+      entity_id: switch.bedroom_speakers
+
+
+
+- alias: Scenes - Huis - Slaapkamer button (rechts)
+  trigger:
+    platform: mqtt
+    topic: 'zigbee/0x00158d0001bc52a7'
+  condition:
+    condition: template
+    value_template: "{{ 'long' == trigger.payload_json.click }}"
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.sleep
+
+
+- alias: Scenes - Huis - Slaapkamer button (links)
+  trigger:
+    platform: mqtt
+    topic: 'zigbee/0x00158d0001870a15'
+  condition:
+    condition: template
+    value_template: "{{ 'long' == trigger.payload_json.click }}"
+  action:
+    service: scene.turn_on
+    data:
+      entity_id: scene.sleep

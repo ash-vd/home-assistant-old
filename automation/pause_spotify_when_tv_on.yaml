@@ -1,4 +1,4 @@
-- alias: Pause spotify when tv turned on
+- alias: Muziek - Pauzeer Spotify als de tv aan gezet wordt
   trigger:
   - platform: template
     value_template: "{{ states.sensor.harmony_woonkamer.state != 'PowerOff' and states.sensor.harmony_woonkamer.state != 'Multiroom' }}"

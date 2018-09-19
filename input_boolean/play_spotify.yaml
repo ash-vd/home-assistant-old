@@ -1,4 +1,0 @@
-play_spotify:
-  name: Play Spotify
-  icon: mdi:music
-  initial: off

@@ -1,0 +1,8 @@
+sensor.0x00158d00022cd75d_pressure:
+  friendly_name: Slaapkamer
+
+sensor.0x00158d00023cfb8e_pressure:
+  friendly_name: Woonkamer
+
+sensor.0x00158d00023f5149_pressure:
+  friendly_name: Washok

@@ -1,7 +1,7 @@
-- alias: Presence - Toilet - On
+- alias: Aanwezigheid - Toilet - Aan
   trigger:
     - platform: state
-      entity_id: switch.wc_boven, binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+      entity_id: binary_sensor.sensor_4
       to: 'on'
 
   action:
@@ -10,10 +10,10 @@
 
 # ---------- #
 
-- alias: Presence - Toilet - Off
+- alias: Aanwezigheid - Toilet - Uit
   trigger:
     platform: state
-    entity_id: binary_sensor.neo_coolcam_battery_powered_pir_sensor_sensor
+    entity_id: binary_sensor.sensor_4
     to: 'off'
     for:
       minutes: 2

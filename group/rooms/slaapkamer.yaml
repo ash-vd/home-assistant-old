@@ -2,5 +2,6 @@ slaapkamer:
   name: Slaapkamer
   control: hidden
   entities:
-    - light.bed
     - climate.slaapkamer
+    - light.0x000b57fffed8cd13
+    - light.0x90fd9ffffe152064

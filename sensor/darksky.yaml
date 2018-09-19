@@ -1,0 +1,13 @@
+- platform: darksky
+  api_key: !secret darksky_api_key
+  forecast:
+    - 1
+    - 2
+    - 3
+    - 4
+  monitored_conditions:
+  - temperature
+  - temperature_high
+  - precip_probability
+  - cloud_cover
+  - icon

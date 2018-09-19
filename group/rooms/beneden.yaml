@@ -3,6 +3,5 @@ beneden:
   control: hidden
   entities:
     - switch.trap
-    - light.hal
+    - light.keuken
     - climate.beneden
-    - light.led

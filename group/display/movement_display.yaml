@@ -1,0 +1,10 @@
+movement_display:
+  name: Beweging
+  entities:
+    - binary_sensor.0x00158d000200bb41_occupancy
+    - binary_sensor.0x00158d0002392bd2_occupancy
+    - binary_sensor.sensor_5
+    - binary_sensor.sensor_2
+    - binary_sensor.sensor_3
+    - binary_sensor.sensor_4
+

@@ -1,7 +1,7 @@
-- alias: Climate - Resume program
+- alias: Klimaat - Programma voortzetten
   trigger:
   - platform: state
-    entity_id: group.presence
+    entity_id: binary_sensor.home, binary_sensor.in_bed
     to: 'on'
 
   condition:

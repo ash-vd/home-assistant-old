@@ -1,11 +1,25 @@
-sensor.neo_coolcam_battery_powered_pir_sensor_luminance:
-  friendly_name: WC
-  icon: mdi:white-balance-sunny
-
-sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2:
-  friendly_name: Woonkamer
-  icon: mdi:white-balance-sunny
-
 sensor.aeotec_zw100_multisensor_6_luminance:
   friendly_name: Badkamer
+  icon: mdi:white-balance-sunny
+
+sensor.0x00158d000200bb41_illuminance:
+  friendly_name: Woonkamer (Beneden)
+  icon: mdi:white-balance-sunny
+  unit_of_measurement: lux
+
+sensor.0x00158d0002392bd2_illuminance:
+  friendly_name: Woonkamer (Deur)
+  icon: mdi:white-balance-sunny
+  unit_of_measurement: lux
+
+sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2:
+  friendly_name: Slaapkamer
+  icon: mdi:white-balance-sunny
+
+sensor.neo_coolcam_battery_powered_pir_sensor_luminance_3:
+  friendly_name: Toilet
+  icon: mdi:white-balance-sunny
+
+sensor.neo_coolcam_battery_powered_pir_sensor_luminance_4:
+  friendly_name: Woonkamer (Boven)
   icon: mdi:white-balance-sunny

@@ -1,6 +1,9 @@
 luminance:
   name: Licht
   entities:
-    - sensor.aeotec_zw100_multisensor_6_luminance
-    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance
-    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2
+    - sensor.0x00158d000200bb41_illuminance #Woonkamer (Beneden)
+    - sensor.0x00158d0002392bd2_illuminance #Woonkamer (Deur)
+    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance_4 #Woonkamer (Boven)
+    - sensor.aeotec_zw100_multisensor_6_luminance #Badkamer
+    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2 #Slaapkamer
+    - sensor.neo_coolcam_battery_powered_pir_sensor_luminance_3 #Toilet

@@ -1,0 +1,11 @@
+- name: Livingroom - Lights - Level 0
+  entities:
+    switch.switch: off
+    switch.trap: off
+    switch.kastje: off
+    switch.plant: off
+    light.kastje: off
+    light.bol: off
+    light.keuken: off
+    light.0x90fd9ffffe16a3f7: off
+    input_boolean.livingroom_scene_set: off

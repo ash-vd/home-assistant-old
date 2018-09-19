@@ -1,7 +1,7 @@
-- alias: Presence - Livingroom - On
+- alias: Aanwezigheid - Woonkamer - Aan
   trigger:
     - platform: state
-      entity_id: binary_sensor.livingroom_movement
+      entity_id: binary_sensor.0x00158d000200bb41_occupancy, binary_sensor.0x00158d0002392bd2_occupancy, binary_sensor.sensor_5
       to: 'on'
 
   action:
@@ -10,13 +10,38 @@
 
 # ---------- #
 
-- alias: Presence - Livingroom - Off
+- alias: Aanwezigheid - Woonkamer - Uit
   trigger:
     platform: state
-    entity_id: binary_sensor.livingroom_movement
+    entity_id: binary_sensor.0x00158d000200bb41_occupancy, binary_sensor.0x00158d0002392bd2_occupancy, binary_sensor.sensor_5
     to: 'off'
     for:
-      minutes: 20
+      minutes: 10
+
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: binary_sensor.0x00158d000200bb41_occupancy
+        state: 'off'
+        for:
+          minutes: 10
+
+      - condition: state
+        entity_id: binary_sensor.0x00158d0002392bd2_occupancy
+        state: 'off'
+        for:
+          minutes: 10
+
+      - condition: state
+        entity_id: binary_sensor.sensor_5
+        state: 'off'
+        for:
+          minutes: 10
+
+      - condition: template
+        value_template: "{{ states('sensor.harmony_woonkamer') == 'PowerOff' or states('sensor.harmony_woonkamer') == 'Multiroom' }}"
+
   action:
     service: homeassistant.turn_off
     entity_id: input_boolean.livingroom_presence

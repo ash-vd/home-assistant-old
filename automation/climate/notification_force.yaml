@@ -1,0 +1,13 @@
+automation:
+  - alias: Force heating when confirmed by iOS notfication
+    trigger:
+      platform: event
+      event_type: ios.notification_action_fired
+      event_data:
+        actionName: on_your_way_home
+    action:
+    - platform: state
+      entity_id: input_boolean.force_heating
+      to: 'on'
+      for:
+        minutes: 30

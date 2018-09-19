@@ -1,5 +1,6 @@
 - platform: template
   sensors:
     livingroom_dark:
-      value_template: '{{ states.sensor.neo_coolcam_battery_powered_pir_sensor_luminance_2.state | int < 100 }}'
-      friendly_name: 'Livingroom less than 100 lux'
+      value_template: '{{(states.sensor.neo_coolcam_battery_powered_pir_sensor_luminance_4.state | float + states.sensor["0x00158d000200bb41_illuminance"].state | float + states.sensor["0x00158d0002392bd2_illuminance"].state | float
+) / 3 < 50}}'
+      friendly_name: 'Livingroom less than 50 lux'

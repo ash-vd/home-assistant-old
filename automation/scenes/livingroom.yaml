@@ -1,60 +1,57 @@
-- alias: Livingroom - Scene - Auto
+- alias: Woonkamer - Scenes
+  initial_state: 'on'
   trigger:
-    platform: template
-    value_template: '{{ is_state("input_select.livingroom_scene", "Automatisch") }}'
-
-  action:
-    service: homeassistant.turn_on
-    entity_id: input_boolean.livingroom_auto
-
-# ---------- #
-
-- alias: Livingroom - Scene - On
-  trigger:
-    platform: template
-    value_template: '{{ is_state("input_select.livingroom_scene", "Aan") }}'
+    platform: state
+    entity_id: input_select.livingroom_scene
 
   action:
     - service: scene.turn_on
-      entity_id: scene.livingroom_lights_on
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.livingroom_auto
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.livingroom_scene", "Aan") %}
+            scene.livingroom__lights__level_4
+          {% elif is_state("input_select.livingroom_scene", "Normaal") %}
+            scene.livingroom__lights__level_3
+          {% elif is_state("input_select.livingroom_scene", "Nacht") %}
+            scene.livingroom__lights__level_1
+          {% elif is_state("input_select.livingroom_scene", "Uit") %}
+            scene.livingroom__lights__level_0
+          {% endif %}
 
-# ---------- #
- 
-- alias: Livingroom - Scene - Dimmed
-  trigger:
-    platform: template
-    value_template: '{{ is_state("input_select.livingroom_scene", "Gedimd") }}'
+#    - service: input_select.select_option
+#      data:
+#        entity_id: input_select.livingroom_scene
+#        option: "Selecteer..."
 
-  action:
-    - service: scene.turn_on
-      entity_id: scene.livingroom_lights_dimmed
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.livingroom_auto
 
-# ---------- #
+#- alias: Woonkamer - Auto - On
+#  initial_state: 'on'
+#  trigger:
+#    platform: state
+#    entity_id: input_select.livingroom_scene
+#
+#  condition:
+#    condition: template
+#    value_template: '{{ trigger.to_state.state == "Automatisch" }}'
+#
+#  action:
+#    service: homeassistant.turn_on
+#    data:
+#      entity_id: input_boolean.livingroom_auto
+#
+#
+#- alias: Woonkamer - Auto - Off
+#  initial_state: 'on'
+#  trigger:
+#    platform: state
+#    entity_id: input_select.livingroom_scene
+#
+#  condition:
+#    condition: template
+#    value_template: '{{ trigger.to_state.state != "Automatisch" and trigger.to_state.state != "Selecteer..." }}'
+#
+#  action:
+#    service: homeassistant.turn_off
+#    data:
+#      entity_id: input_boolean.livingroom_auto
 
-- alias: Livingroom - Scene - Night
-  trigger:
-    platform: template
-    value_template: '{{ is_state("input_select.livingroom_scene", "Nacht") }}'
-
-  action:
-    - service: scene.turn_on
-      entity_id: scene.livingroom_lights_night
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.livingroom_auto
-
-# ---------- #
-
-- alias: Livingroom - Scene - Off
-  trigger:
-    platform: template
-    value_template: '{{ is_state("input_select.livingroom_scene", "Uit") }}'
-
-  action:
-    - service: scene.turn_on
-      entity_id: scene.livingroom_lights_off
-    - service: homeassistant.turn_off
-      entity_id: input_boolean.livingroom_auto

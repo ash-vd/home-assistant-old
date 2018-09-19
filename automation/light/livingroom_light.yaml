@@ -1,10 +1,24 @@
 # --- Normal mode --- #
-
 - alias: Lightning - Livingroom - On
   trigger:
   - platform: state
-    entity_id: input_boolean.livingroom_presence, binary_sensor.livingroom_radar_01, input_boolean.livingroom_auto
+    # All sensors controling the input_boolean. Without these the lights wouldn't turn on when:
+    # - The input_boolean is on
+    # - The lights were turned off (i.e. by a scene)
+    # - And there is movement
+    entity_id: binary_sensor.motion_sensor_158d000200bb41, binary_sensor.motion_sensor_158d0002392bd2, binary_sensor.sensor_5
     to: 'on'
+
+  - platform: state
+    # time-based input_boolean
+    entity_id: input_boolean.livingroom_presence
+    to: 'on'
+
+  - platform: state
+    # change of room-scene
+    entity_id: input_select.livingroom_scene
+    to: 'Automatisch'
+
   - platform: state
     entity_id: binary_sensor.livingroom_dark
     to: 'on'
@@ -19,30 +33,58 @@
         entity_id: input_select.mode
         state: 'Normaal'
 
+      - condition: state
+        entity_id: input_boolean.livingroom_presence
+        state: 'on'
 
       - condition: state
         entity_id: binary_sensor.livingroom_dark
         state: 'on'
         for:
           minutes: 3
+
       - condition: state
-        entity_id: input_boolean.livingroom_presence
-        state: 'on'
+        entity_id: input_select.livingroom_scene
+        state: 'Automatisch'
+
       - condition: state
-        entity_id: input_boolean.livingroom_auto
-        state: 'on'
+        entity_id: input_boolean.livingroom_scene_set
+        state: 'off'
+
 
   action:
     - service: scene.turn_on
-      entity_id: scene.livingroom_lights_dimmed
+      entity_id: scene.livingroom__lights__level_3
+
+
 
 # --- Night mode --- #
-
 - alias: Lightning - Livingroom - Night
   trigger:
-  - platform: state
-    entity_id: input_boolean.livingroom_presence, binary_sensor.livingroom_dark, input_boolean.livingroom_auto
-    to: 'on'
+    - platform: state
+      # All sensors controling the input_boolean. Without these the lights wouldn't turn on when:
+      # - The input_boolean is on
+      # - The lights were turned off (i.e. by a scene)
+      # - And there is movement
+      entity_id: binary_sensor.motion_sensor_158d000200bb41, binary_sensor.sensor_5
+      to: 'on'
+
+    - platform: state
+      # time-based input_boolean
+      entity_id: input_boolean.livingroom_presence
+      to: 'on'
+
+    - platform: state
+      # change of room-scene
+      entity_id: input_select.livingroom_scene
+      to: 'Automatisch'
+
+    - platform: state
+      entity_id: binary_sensor.livingroom_dark
+      to: 'on'
+      for:
+        minutes: 3
+
 
   condition:
     condition: and
@@ -51,41 +93,80 @@
         entity_id: input_select.mode
         state: 'Nacht'
 
-
       - condition: state
         entity_id: binary_sensor.livingroom_dark
         state: 'on'
+        for:
+          minutes: 3
+
       - condition: state
-        entity_id: input_boolean.livingroom_presence
-        state: 'on'
+        entity_id: input_select.livingroom_scene
+        state: 'Automatisch'
+
       - condition: state
-        entity_id: input_boolean.livingroom_auto
-        state: 'on'
+        entity_id: input_boolean.livingroom_scene_set
+        state: 'off'
 
   action:
     - service: scene.turn_on
-      entity_id: scene.livingroom_lights_night
+      entity_id: scene.livingroom__lights__level_1
+
+# --- Standby --- #
+
+#- alias: Lightning - Livingroom - Standby
+#  trigger:
+#  - platform: state
+#    entity_id: input_boolean.livingroom_presence
+#    to: 'off'
+#
+#  condition:
+#    condition: and
+#    conditions:
+#    - condition: state
+#      entity_id: input_boolean.livingroom_auto
+#      state: 'on'
+#
+#    - condition: state
+#      entity_id: input_select.livingroom_scene
+#      state: 'Automatisch'
+#
+#  action:
+#    - service: scene.turn_on
+#      entity_id: scene.livingroom__lights__level_2
+
+
 
 # --- Turn off --- #
-
 - alias: Lightning - Livingroom - Off
   trigger:
-  - platform: state
-    entity_id: input_boolean.livingroom_presence
-    to: 'off'
   - platform: state
     entity_id: binary_sensor.livingroom_dark
     to: 'off'
     for:
-      minutes: 7
+      minutes: 6
+
+  - platform: state
+    entity_id: input_boolean.livingroom_presence
+    to: 'off'
 
   condition:
     condition: and
     conditions:
     - condition: state
-      entity_id: input_boolean.livingroom_auto
-      state: 'on'
+      entity_id: input_select.livingroom_scene
+      state: 'Automatisch'
+
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: input_boolean.livingroom_presence
+          state: 'off'
+        - condition: state
+          entity_id: binary_sensor.livingroom_dark
+          state: 'off'
+          for:
+            minutes: 6
 
   action:
     - service: scene.turn_on
-      entity_id: scene.livingroom_lights_off
+      entity_id: scene.livingroom__lights__level_0

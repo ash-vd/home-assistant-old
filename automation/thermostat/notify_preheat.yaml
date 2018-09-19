@@ -1,0 +1,16 @@
+- alias: Klimaat - Notificatie voor HomeBrain
+  trigger:
+  - platform: state
+    entity_id: input_boolean.preheat
+    to: 'on'
+
+  condition:
+    condition: state
+    entity_id: binary_sensor.home
+    state: 'off'
+
+  action:
+    - service: notify.ios_iphone_ashwin
+      data:
+        message: "Preheat"
+

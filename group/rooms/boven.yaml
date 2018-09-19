@@ -3,10 +3,11 @@ boven:
   control: hidden
   entities:
     - input_select.livingroom_scene
-    - switch.neo_coolcam_power_plug_12a_switch
+    - switch.switch
+    - switch.plant
+    - switch.kastje
+    - light.0x90fd9ffffe16a3f7
     - light.bol
-    - light.kastje
-    - light.groot
     - switch.greenwave_powernode_6_port_switch
     - switch.greenwave_powernode_6_port_switch_2
     - switch.greenwave_powernode_6_port_switch_3

@@ -1,0 +1,24 @@
+turnOnMedia:
+  action:
+    - service: homeassistant.turn_on
+      data_template:
+        entity_id: >
+          {% if device_type == "speakers" %}
+            {% if house_room == "living room" %}
+             switch.harmony_multiroom
+            {%-elif house_room == "bedroom" %}
+             switch.bedroom_speakers
+            {%-elif house_room == "kitchen" %}
+              switch.kitchen_speakers
+            {%-elif house_room == "computer" %}
+              switch.computer
+            {%-elif house_room == "all" %}
+              group.speakers
+            {% else %}
+             group.speakers
+            {% endif %}
+          {% elif device_type == "tv" %}
+            none
+          {% else %}
+            none
+          {% endif %}

@@ -1,0 +1,6 @@
+pressure:
+  name: Luchtdruk
+  entities:
+    - sensor.0x00158d00022cd75d_pressure
+    - sensor.0x00158d00023cfb8e_pressure
+    - sensor.0x00158d00023f5149_pressure

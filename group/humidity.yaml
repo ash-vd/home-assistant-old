@@ -2,5 +2,6 @@ humidity:
   name: Luchtvochtigheid
   entities:
     - sensor.aeotec_zw100_multisensor_6_relative_humidity
-    - sensor.washok_humidity
-    - sensor.slaapkamer_humidity
+    - sensor.0x00158d00022cd75d_humidity
+    - sensor.0x00158d00023cfb8e_humidity
+    - sensor.0x00158d00023f5149_humidity

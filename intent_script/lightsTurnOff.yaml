@@ -1,0 +1,4 @@
+lightsTurnOff:
+  action:
+    - service: homeassistant.turn_on
+      entity_id: scene.livingroom__lights__level_0

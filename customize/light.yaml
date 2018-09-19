@@ -1,25 +1,26 @@
-light.wc_boven:
-  friendly_name: WC
+light.toilet:
+  friendly_name: Toilet
 
 light.hal:
   friendly_name: Hal
-  homebridge_hidden: true
 
 light.bol:
   friendly_name: Bol
 
-light.groot:
+light.0x90fd9ffffe16a3f7:
   friendly_name: Groot
 
 light.bed:
   friendly_name: Bed
 
-light.kastje:
-  friendly_name: Kastje
-  
-light.fibaro_system_fgd212_dimmer_2_level:
+light.keuken:
+  friendly_name: Keuken
+
+light.level:
   friendly_name: Badkamer
 
-light.fibaro_system_fgd212_dimmer_2_level_2:
-  friendly_name: Badkamer
-  homebridge_hidden: true
+light.0x90fd9ffffe152064:
+  friendly_name: Rechts
+
+light.0x000b57fffed8cd13:
+  friendly_name: Links

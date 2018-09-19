@@ -1,8 +1,8 @@
-media_player.snapcast_client_0013efc00012:
+media_player.snapcast_client_slaapkamer:
   friendly_name: Slaapkamer
 
-media_player.snapcast_client_b827ebb578b3:
+media_player.snapcast_client_keuken:
   friendly_name: Keuken
-  
-media_player.snapcast_client_b827ebb7529f:
+
+media_player.snapcast_client_woonkamer:
   friendly_name: Woonkamer

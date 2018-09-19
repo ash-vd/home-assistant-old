@@ -4,6 +4,7 @@ AppDaemon:
   logsize: 100000
   log_generations: 3
   threads: 10
+  app_dir: /home/domotica/.homeassistant/appdaemon/apps
 HASS:
   ha_url: https://home.ashwinvandijk.nl
   ha_key: Schietb@@n39

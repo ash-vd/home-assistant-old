@@ -1,8 +1,0 @@
-- platform: rfxtrx
-  automatic_add: True
-  devices:
-    0a520700380e00ea340159:
-      name: Slaapkamer
-      data_type:
-       - Humidity
-       - Temperature

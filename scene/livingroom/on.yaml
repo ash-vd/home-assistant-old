@@ -1,0 +1,3 @@
+- name: Livingroom on
+  entities:
+    scene.livingroom_media_on: on

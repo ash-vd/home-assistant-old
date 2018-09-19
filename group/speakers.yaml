@@ -1,0 +1,6 @@
+speakers:
+  name: Speakers
+  entities:
+    - switch.kitchen_speakers
+    - switch.bedroom_speakers
+    - switch.harmony_multiroom

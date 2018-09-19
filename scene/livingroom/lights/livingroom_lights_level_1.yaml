@@ -1,0 +1,20 @@
+- name: Livingroom - Lights - Level 1
+  entities:
+    switch.switch: off
+    switch.trap: off
+    switch.kastje: off
+    switch.plant: on
+    light.bol:
+      state: on
+      brightness: 20
+      
+    light.keuken:
+      state: on
+      brightness: 20
+      rgb_color: [255,90,35]
+
+    light.0x90fd9ffffe16a3f7:
+      state: on
+      brightness: 20
+
+    input_boolean.livingroom_scene_set: on

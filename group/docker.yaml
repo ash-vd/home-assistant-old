@@ -1,0 +1,8 @@
+docker:
+  name: Docker
+  entities:
+    - switch.hass
+    - switch.mqtt
+    - switch.mysql
+    - switch.influxdb
+    - switch.grafana

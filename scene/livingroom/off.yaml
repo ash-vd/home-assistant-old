@@ -1,0 +1,5 @@
+- name: Livingroom off
+  entities:
+    script.livingroom_media_off: on
+    scene.livingroom__lights__level_0: on
+    switch.computer: off

@@ -1,0 +1,3 @@
+- name: Bedroom on
+  entities:
+    switch.bedroom_speakers: on

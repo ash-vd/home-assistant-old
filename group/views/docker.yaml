@@ -1,0 +1,6 @@
+docker_view:
+  view: yes
+  name: Docker
+  icon: mdi:server-network
+  entities:
+    - group.docker

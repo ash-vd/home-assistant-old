@@ -4,4 +4,4 @@
   target_sensor: sensor.none
   min_temp: 15
   max_temp: 26
-  target_temp: 16
+  target_temp: 17.5

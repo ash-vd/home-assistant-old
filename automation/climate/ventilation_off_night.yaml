@@ -1,7 +1,0 @@
-- alias: Climate - Ventilation Off
-  trigger:
-    platform: time
-    at: '05:00:00'
-  action:
-    service: homeassistant.turn_off
-    entity_id: switch.fibaro_system_fgs222_double_relay_switch_2x15kw_switch_2

@@ -1,5 +1,0 @@
-windows:
-  name: Ramen
-  entities:
-    - switch.raam_woonkamer
-    - switch.raam_woonkamer_2

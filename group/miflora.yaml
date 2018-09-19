@@ -1,6 +1,7 @@
 plants:
   name: Planten
   entities:
-    - plant.beneden
+    - plant.beneden_tafel
+    - plant.beneden_vensterbank
     - plant.boven_hoek
     - plant.boven_stoel

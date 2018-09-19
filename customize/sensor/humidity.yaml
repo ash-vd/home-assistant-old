@@ -1,8 +1,15 @@
 sensor.aeotec_zw100_multisensor_6_relative_humidity:
   friendly_name: Badkamer
+  icon: mdi:water-percent
 
-sensor.washok_humidity:
-  friendly_name: Washok
-
-sensor.slaapkamer_humidity:
+sensor.0x00158d00022cd75d_humidity:
   friendly_name: Slaapkamer
+  icon: mdi:water-percent
+
+sensor.0x00158d00023cfb8e_humidity:
+  friendly_name: Woonkamer
+  icon: mdi:water-percent
+
+sensor.0x00158d00023f5149_humidity:
+  friendly_name: Washok
+  icon: mdi:water-percent

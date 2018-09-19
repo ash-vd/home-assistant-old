@@ -3,5 +3,46 @@ onyourwayhome:
   class: OnYourWayHome
   entity_id: sensor.ashwin_to_home
   turn_on: script.ask_if_going_home
-  treshold: 1500
-  moves: 3
+  treshold: 0
+  moves: 1
+
+
+
+
+heaty:
+  # Obligatory settings that tell appdaemon where to find the app.
+  # You shouldn't need to change these two.
+  module: hass_apps_loader
+  class: HeatyApp
+
+  thermostat_defaults:
+    opmode_heat: heat
+    opmode_off: "off"
+
+  schedule_prepend:
+  - temp: Result(17.5) if room_name not in ("slaapkamer") and (app.get_state("binary_sensor.home") == "off" and app.get_state("input_boolean.force_heating") == "off") else Ignore()
+
+  rooms:
+    # Define such a block for each room you want to control.
+    boven:
+      thermostats:
+        climate.boven:
+      schedule:
+      - { temp: 21, start: "09:30", end: "22:30", weekdays: 1-5 }
+      - { temp: 21, start: "09:30", end: "23:30", weekdays: "6,7" }
+      - { temp: 17.5 }
+
+    beneden:
+      thermostats:
+        climate.beneden:
+      schedule:
+      - { temp: 21, start: "08:00", end: "22:30", weekdays: 1-5 }
+      - { temp: 21, start: "09:30", end: "23:30", weekdays: "6,7" }
+      - { temp: 17.5 }
+
+    slaapkamer:
+      thermostats:
+        climate.slaapkamer:
+      schedule:
+      - { temp: 19, start: "09:30", end: "21:30", weekdays: 1-7 }
+      - { temp: 17.5 }

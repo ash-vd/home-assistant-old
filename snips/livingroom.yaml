@@ -1,5 +1,0 @@
-intents:
-  LivingroomLightsDimmed:
-    action:
-      service: scene.turn_on
-      entity_id: scene.livingroom_lights_dimmed

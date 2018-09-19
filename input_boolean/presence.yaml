@@ -9,3 +9,12 @@ bathroom_presence:
 toilet_presence:
   name: toilet_presence
   initial: off
+
+bedroom_presence:
+  name: bedroom_presence
+  initial: off
+
+#kitchen_presence:
+#  name: kitchen_presence
+#  initial: off
+

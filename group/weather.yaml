@@ -1,7 +1,0 @@
-weather:
-  name: Weer
-  entities:
-    - sensor.pws_weather
-    - sensor.pws_temp_c
-    - sensor.buienradar
-    # - camera.weerkaart

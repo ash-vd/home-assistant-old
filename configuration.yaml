@@ -6,16 +6,27 @@ homeassistant:
   longitude: !secret longitude
 
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 2
+  elevation: 0
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Amsterdam
 
+  auth_providers:
+    - type: homeassistant
+    # uncomment this to enable backwards compatible API password support
+    - type: legacy_api_password
+
   customize: !include_dir_merge_named customize
+
+# mqtt_statestream:
+#   base_topic: homeassistant
+#   publish_attributes: true
+#   publish_timestamps: true
 
 # Enables the frontend
 frontend:
+
 # Enables iOS
 ios:
   push:
@@ -31,16 +42,18 @@ ios:
 http:
   base_url: home.ashwinvandijk.nl
   api_password: !secret http_password
-  ssl_certificate: /etc/letsencrypt/live/home.ashwinvandijk.nl/fullchain.pem
-  ssl_key: /etc/letsencrypt/live/home.ashwinvandijk.nl/privkey.pem
+#  ssl_certificate: /etc/letsencrypt/live/home.ashwinvandijk.nl/fullchain.pem
+#  ssl_key: /etc/letsencrypt/live/home.ashwinvandijk.nl/privkey.pem
   cors_allowed_origins:
     - http://localhost:3000
 
 mqtt:
   broker: 10.10.1.1
   port: 1883
-  client_id: home-assistant-1
+  client_id: homeassistant
   keepalive: 60
+  discovery: true
+  discovery_prefix: homeassistant
 
 # Checks for available updates
 updater:
@@ -53,22 +66,26 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 #conversation:
 
-# Enables support for tracking state changes over time.
-history:
-  include:
-    domains:
-      - sensor
-      - switch
-      - media_player
-
 recorder:
   purge_interval: 2
-  purge_keep_days: 7
-  db_url: !secret db_url
+  purge_keep_days: 4
+  db_url: !secret recorder_url
+
+influxdb:
+  host: 127.0.0.1
+
+history:
+  use_include_order: True
+  include:
+      domains:
+        - sensor
+        - light
+        - switch
+        - binary_sensor
 
 # Logs
 logger:
-  default: info
+  default: warn
 
 # View all events in a logbook
 logbook:
@@ -84,6 +101,7 @@ group: !include_dir_merge_named group
 input_boolean: !include_dir_merge_named input_boolean
 input_select: !include_dir_merge_named input_select
 input_number: !include_dir_merge_named input_number
+intent_script: !include_dir_merge_named intent_script
 light: !include_dir_merge_list light
 media_player: !include_dir_merge_list media_player
 plant: !include_dir_merge_named plant
@@ -98,10 +116,6 @@ zone: !include_dir_merge_list zone
 # Zwave
 zwave:
   usb_path: /dev/zwave
-
-# RFXCOM
-rfxtrx:
-  device: /dev/rfxcom
 
 notify:
   - name: pushbullet

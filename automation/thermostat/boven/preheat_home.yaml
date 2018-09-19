@@ -1,4 +1,4 @@
-- alias: Climate - Preheat when home
+- alias: Klimaat - Voorverwarmen als er iemand thuis is
   trigger:
   - platform: state
     entity_id: input_number.thermostat_boven_preheat
@@ -13,6 +13,9 @@
         conditions:
           - condition: state
             entity_id: group.presence
+            state: 'on'
+          - condition: state
+            entity_id: binary_sensor.in_bed
             state: 'on'
           - condition: template
             value_template: '{{ states.climate.boven.attributes.temperature | float > states.input_number.thermostat_boven_preheat.state | float }}'

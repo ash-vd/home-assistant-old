@@ -1,0 +1,8 @@
+- alias: "Re-schedule heaty"
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.home, input_boolean.force_heating
+  action:
+  - event: heaty_reschedule
+#    event_data:
+#      room_name: bath

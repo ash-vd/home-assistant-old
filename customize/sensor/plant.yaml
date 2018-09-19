@@ -1,8 +1,11 @@
-plant.beneden:
-  friendly_name: Beneden
+plant.beneden_tafel:
+  friendly_name: Beneden (tafel)
+
+plant.beneden_vensterbank:
+  friendly_name: Beneden (vensterbank)
 
 plant.boven_hoek:
-  friendly_name: Boven hoek
+  friendly_name: Boven (hoek)
 
 plant.boven_stoel:
-  friendly_name: Boven stoel
+  friendly_name: Boven (stoel)

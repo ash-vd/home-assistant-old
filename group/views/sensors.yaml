@@ -3,13 +3,11 @@ sensors_view:
   name: Sensors
   icon: mdi:access-point
   entities:
-    - group.doors
-    - group.windows
     - group.temperature
     - group.humidity
-    - group.usage
-    - group.presence
-    - group.movement
+    - group.pressure
+    - group.presence_display
+    - group.movement_display
     - group.luminance
-    - group.climate_valves
     - group.plants
+    - group.smokedetectors

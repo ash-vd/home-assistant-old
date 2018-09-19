@@ -6,4 +6,8 @@ music_view:
     - switch.bedroom_speakers
     - switch.kitchen_speakers
     - switch.harmony_multiroom
+    - media_player.snapcast_group_08dac6c822bfbcdc0c40e466dc4ebd42
+    - media_player.snapcast_client_keuken
+    - media_player.snapcast_client_slaapkamer
+    - media_player.snapcast_client_woonkamer
     - media_player.spotify
